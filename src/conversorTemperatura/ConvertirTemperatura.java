@@ -4,9 +4,9 @@ import javax.swing.JOptionPane;
 
 public class ConvertirTemperatura {
 	
-	//celsius a Farenheit 1c = 33.8
+	//celsius a Farenheit 1f = (c *1.8) + 32
 	public double ConvertirCelciusAFarenheit(double valor) {
-		double farenheit = valor * 33.8;
+		double farenheit = (valor *1.8) + 32;
     	farenheit = (double) Math.round(farenheit *100d)/100;
         JOptionPane.showMessageDialog(null, +valor+ " Grados Celcius son " +farenheit+ " Grados Farenheit ");
 		return farenheit;
@@ -27,16 +27,16 @@ public class ConvertirTemperatura {
         return kelvinCelcius;
 	}
 	
-	//kelvin a Farenheit k = (valor * 9/5)-459.67
+	//kelvin a Farenheit F = (k - 273.15) * 1.8 + 32
 	public void ConvertirKelvinAFarenheit(double valor) {
-		double kelvinFarenheit = (valor * 9/5)-459.67;
+		double kelvinFarenheit = (valor - 273.15) * 1.8 + 32;
 		kelvinFarenheit	= (double) Math.round(kelvinFarenheit *100d)/100;
         JOptionPane.showMessageDialog(null, +valor+ " Kelvin son " +kelvinFarenheit+ " Celcius");
 	}
 	
-	//Farenheit a Celsius
+	//Farenheit a Celsius 1C = (F - 32)/1.8
 	public void ConvertirFarenheitACelcius(double valor) {
-		double celcius = (valor - 32) / 1.8;
+		double celcius = valor *1.8 + 32;
         celcius = (double) Math.round(celcius *100d)/100;
         JOptionPane.showMessageDialog(null, +valor+ " Grados Farenheit son " +celcius+ " Celcius");
 	}
